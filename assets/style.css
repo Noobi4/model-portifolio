@@ -10,7 +10,7 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
-
+    --skin-color: #e08888;
 }
 
 *{
@@ -45,7 +45,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    border-right: 1px solid var(--bg-black-50);
 }
 .main-aside .logo{
     position: absolute;
@@ -70,6 +70,28 @@ body{
 
 .main-aside .logo a span{
     color:#302e4d;
+}
+
+aside .nav-toggle{
+    height:40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: flex;
+    align-items: center;
+}
+
+aside .nav-toggle span{
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+
 }
 
 .subtile{
@@ -97,4 +119,31 @@ body{
     right: 0;
     z-index: 0;
     opacity: 1;
+}
+
+aside .nav{
+    margin-top: 50px;
+}
+
+aside .nav li{
+    margin-bottom: 20px;
+    display: block;
+}
+
+aside .nav li a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-black-900);
+    padding: 5px 15px;
+    border-bottom: var(--bg-black-50) 1px solid;
+}
+
+aside .nav li a.active{
+    color: var(--skin-color);
+}
+
+aside .nav li a i{
+
+    margin-right:.9rem ;
+
 }
