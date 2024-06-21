@@ -9,6 +9,7 @@
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
+    --text-black-1000: #191924;
     --text-black-700: #504e70;
     --skin-color: #e08888;
 }
@@ -66,10 +67,16 @@ body{
     width: 50%;
     height: 50%;
     color: #8079eb;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-aside .logo a:hover{
+    transform: scale(1.08);
+    box-shadow: 0px 0px 15px 15px var(--skin-color);
 }
 
 .main-aside .logo a span{
-    color:#302e4d;
+    color: var(--text-black-700);
 }
 
 aside .nav-toggle{
@@ -130,7 +137,7 @@ aside .nav-toggle span::after{
     background: var(--text-black-900);
     height: 2px;
 }
-.home-section{
+.home{
     background:var(--bg-black-900);
     min-height: 100vh;
     display: block;
@@ -145,9 +152,12 @@ aside .nav-toggle span::after{
 
 .row{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin:0 -15px;
     position: relative;
+    width: 100%;
 }
 .padding-15{
     padding: 0 15px;
@@ -181,16 +191,76 @@ aside .nav li a i{
 
 .container{
     max-width: 1100px;
-    width: 100%;
-    background-color: red;
-    margin: auto;
+    display: flex;
 }
+.home{
+    min-height: 100vh;
+    background-color: var(--text-black-900);
+    display: flex;
 
-.home-image{
-
+    color: var(--bg-black-50);
+}
+.home .home-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.home .home-image{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
 }
 
 .home-image img{
-    background-color: black;
+    border-radius: 80px;
+    background: transparent;
+    border: #302e4d solid 1px solid;
+    box-shadow: 10px 8px 10px 10px var(--text-black-1000) ;
     height: 400px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.home-image img:hover{
+    box-shadow: 0px 0px 10px 10px var(--skin-color);
+}
+
+h3.hello{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+h3.hello span{
+    font-family: 'Playwrite PT', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--skin-color);
+}
+
+.typing{
+    color: var(--skin-color);
+}
+
+.home-info p{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--bg-black-50);
+}
+
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    background-color: var(--skin-color);
+    white-space: nowrap ;
+    border-radius: 40px;
+    color: white;
+    display: inline-block;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.08);
+    box-shadow: 0px 0px 3px 3px var(--skin-color);
 }
