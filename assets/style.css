@@ -150,6 +150,22 @@ aside .nav-toggle span::after{
     padding: 0 30px;
 }
 
+.page{
+    background:var(--bg-black-900);
+    min-height: 100vh;
+
+    left: 270px;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 1;
+    padding: 0 30px;
+}
+.hidden{
+    display: none !important;
+}
+
+
 .row{
     display: flex;
     justify-content: center;
@@ -263,4 +279,12 @@ h3.hello span{
 .btn:hover{
     transform: scale(1.08);
     box-shadow: 0px 0px 3px 3px var(--skin-color);
+}
+
+
+/* About me*/
+
+.page .container{
+    padding-top: 60px;
+    padding-bottom: 70px;
 }
